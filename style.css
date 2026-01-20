@@ -1,3 +1,16 @@
+# colors
+:root{
+  --
+  --c--white :hsl(0, 0%, 100%);
+
+  --color-main-bg: var(--c--white);
+  
+}
+
+
+
+
+
 *,
 *::before,
 *::after {
