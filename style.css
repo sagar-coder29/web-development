@@ -1,15 +1,40 @@
-# colors
-:root{
-  --
-  --c--white :hsl(0, 0%, 100%);
-
-  --color-main-bg: var(--c--white);
-  
+/* source-sans-3-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/source-sans-3-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-sans-3-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/source-sans-3-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* colors */
+:root {
+  --c-gary-dark: hsl(233, 14%, 25%);
+  --c--white: hsl(0, 0%, 100%);
+  --c-purple: hsl(232, 58%, 55%);
+  --c-sky-blue: hsl(180, 100%, 42%);
+  --c-transparent: transparent;
+  --c-magenta: hsl(320, 85%, 41%);
 
-
-
+  --color-main-bg: var(--c--white);
+  --color-text-dark: var(--c-gary-dark);
+  --color-text-light: var(--c--white);
+  --color-hero-bg: var(--c-purple);
+  --color-primary-button-bg: var(--c-sky-blue);
+  --color-primary-button-text: var(--c-gary-dark);
+  --color-secondary-button-bg: var(--c-transparent);
+  --color-secondary-button-border: var(--c-white);
+  --color-secondary-button-text: var(--c-white);
+  --color-full-width-bg: var(--c-magenta);
+}
 
 *,
 *::before,
@@ -19,6 +44,9 @@
 
 * {
   margin: 0;
+}
+body {
+  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -30,4 +58,9 @@ picture,
 svg {
   max-width: 100%;
   display: block;
+}
+
+.wrapper {
+  max-width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
+  margin-inline: auto;
 }
